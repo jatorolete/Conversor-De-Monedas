@@ -14,17 +14,24 @@ public class MenuConversor {
 
         while (opcion != 7){
             System.out.println("*******************************");
-            System.out.println("Sea bienvenido/a al Conversor de Moneda");
+            System.out.println("Sea bienvenido/a al Conversor de Moneda =]");
             System.out.println("*******************************");
-            System.out.println("1) Dólar => Peso argentino");
-            System.out.println("2) Peso argentino => Dólar");
-            System.out.println("3) Dólar => Real brasileño");
-            System.out.println("4) Real brasileño => Dólar");
-            System.out.println("5) Dólar => Peso colombiano");
-            System.out.println("6) Peso colombiano => Dólar");
-            System.out.println("7) Salir");
+            System.out.println("1) Dólar (USD) => Peso argentino (ARS)");
+            System.out.println("2) Peso argentino (ARS) => Dólar (USD)");
+            System.out.println("3) Dólar (USD) => Real brasileño (BRL)");
+            System.out.println("4) Real brasileño (BRL) => Dólar (USD)");
+            System.out.println("5) Dólar (USD) => Peso colombiano (COP)");
+            System.out.println("6) Peso colombiano (COP) => Dólar (USD)");
+            System.out.println("7) Dólar (USD) => Peso chileno (CLP)");
+            System.out.println("8) Peso chileno (CLP) => Dólar (USD)");
+            System.out.println("9) Peso chileno (CLP) => Peso argentino (ARS)");
+            System.out.println("10) Peso argentino (ARS) => Peso chileno (CLP)");
+            System.out.println("11) Peso chileno (CLP) => Sol peruano (PEN)");
+            System.out.println("12) Peso chileno (CLP) => Real brasileño (BRL)");
+            System.out.println("13) Salir");
             System.out.println("*******************************");
             System.out.print("Elija una opción válida: ");
+
 
             opcion = scanner.nextInt();
 
@@ -35,13 +42,23 @@ public class MenuConversor {
             String base = "";
             String target = "";
 
-            switch (opcion){
+            switch (opcion) {
                 case 1 -> { base = "USD"; target = "ARS"; }
                 case 2 -> { base = "ARS"; target = "USD"; }
                 case 3 -> { base = "USD"; target = "BRL"; }
                 case 4 -> { base = "BRL"; target = "USD"; }
                 case 5 -> { base = "USD"; target = "COP"; }
                 case 6 -> { base = "COP"; target = "USD"; }
+                case 7 -> { base = "USD"; target = "CLP"; }
+                case 8 -> { base = "CLP"; target = "USD"; }
+                case 9 -> { base = "CLP"; target = "ARS"; }
+                case 10 -> { base = "ARS"; target = "CLP"; }
+                case 11 -> { base = "CLP"; target = "PEN"; }
+                case 12 -> { base = "CLP"; target = "BRL"; }
+                case 13 -> {
+                    System.out.println("Gracias por usar el conversor. ¡Hasta luego!");
+                    return;
+                }
                 default -> {
                     System.out.println("Opción inválida.");
                     continue;
